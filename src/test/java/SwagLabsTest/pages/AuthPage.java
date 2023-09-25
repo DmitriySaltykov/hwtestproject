@@ -146,4 +146,11 @@ public class AuthPage {
 
         return this;
     }
+
+    //Клик на кнопку чекаута
+    public AuthPage ChecoutClick() {
+        $("#checkout").should(exist);
+
+        return this;
+    }
 }

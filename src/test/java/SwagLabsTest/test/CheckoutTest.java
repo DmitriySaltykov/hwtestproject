@@ -11,13 +11,28 @@ public class CheckoutTest {
 
     @Test
     @DisplayName("Переход на страницу корзины")
-    void SwagLabsPDPTest() {
+    void SwagLabsCheckoutTest() {
 
         // Открытие страницы,успешная авторизация
         authPage.AccessAuthWithConfig()
                 .addToCart()
                 .OpenCheckout()
                 .CheckItem();
+
+        // Закрытие браузера
+        closeWebDriver();
+
+    }
+    @Test
+    @DisplayName("Переход на страницу оплаты")
+    void SwagLabsGoRoPayest() {
+
+        // Открытие страницы,успешная авторизация
+        authPage.AccessAuthWithConfig()
+                .addToCart()
+                .OpenCheckout()
+                .CheckItem()
+                .ChecoutClick();
 
         // Закрытие браузера
         closeWebDriver();
