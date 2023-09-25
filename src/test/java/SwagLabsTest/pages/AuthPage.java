@@ -96,12 +96,20 @@ public class AuthPage {
 
         return this;
     }
-
-    public AuthPage Logout() {
-        $(".logout_sidebar_link").click();
+    //Раскрытие бургера-меню
+    public AuthPage OpenBurger() {
+        $(".bm-burger-button").click();
 
         return this;
     }
+    //Нажатие на кнопку логаут
+    public AuthPage Logout() {
+        $("#logout_sidebar_link").click();
+
+        return this;
+    }
+
+
      static final String CONFIG_FILE = "config.properties";
     private Properties loadConfig() {
         Properties properties = new Properties();
@@ -127,4 +135,11 @@ public class AuthPage {
 
 
 
+
+    //Нажатие на кнопку корзины
+    public AuthPage OpenCheckout() {
+        $("#shopping_cart_container").click();
+
+        return this;
+    }
 }
