@@ -3,11 +3,8 @@ package SwagLabsTest.test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -19,7 +16,7 @@ public class SortingTest {
             @Tag("search")
     })
     @DisplayName("Проверка наличия сортировки на странице с товарами ")
-        @CsvSource(value = {
+    @CsvSource(value = {
             "az, Name (A to Z)",
             "za, Name (Z to A)",
             "lohi, Price (low to high)",
@@ -34,9 +31,8 @@ public class SortingTest {
         $("#password").setValue("secret_sauce");
         $("#login-button").click();
 
-       $("[data-test='product_sort_container']").selectOptionByValue((testData));
-      $("[data-test='product_sort_container']").shouldHave(text(expectedResult));
-
+        $("[data-test='product_sort_container']").selectOptionByValue((testData));
+        $("[data-test='product_sort_container']").shouldHave(text(expectedResult));
 
 
     }
