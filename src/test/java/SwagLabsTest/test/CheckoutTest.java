@@ -8,14 +8,16 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class CheckoutTest {
     AuthPage authPage = new AuthPage();
+
     @Test
     @DisplayName("Переход на страницу корзины")
     void SwagLabsPDPTest() {
 
         // Открытие страницы,успешная авторизация
         authPage.AccessAuthWithConfig()
-                .inventoryClick()
-                .OpenCheckout();
+                .addToCart()
+                .OpenCheckout()
+                .CheckItem();
 
         // Закрытие браузера
         closeWebDriver();

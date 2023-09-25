@@ -133,12 +133,16 @@ public class AuthPage {
         return this;
     }
 
-
-
-
     //Нажатие на кнопку корзины
     public AuthPage OpenCheckout() {
         $("#shopping_cart_container").click();
+
+        return this;
+    }
+
+        //Проверка наличия товара в корзине
+    public AuthPage CheckItem() {
+        $(".cart_item").should(exist);
 
         return this;
     }
