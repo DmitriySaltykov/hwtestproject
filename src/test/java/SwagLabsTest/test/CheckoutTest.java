@@ -27,16 +27,34 @@ public class CheckoutTest {
     @DisplayName("Переход на страницу оплаты")
     void SwagLabsGoRoPayest() {
 
-        // Открытие страницы,успешная авторизация
-        authPage.AccessAuthWithConfig()
+                authPage.AccessAuthWithConfig()
                 .addToCart()
                 .OpenCheckout()
                 .CheckItem()
-                .ChecoutClick();
+                .CheckoutClick();
 
         // Закрытие браузера
         closeWebDriver();
 
     }
+
+    @Test
+    @DisplayName("Оформление заказа, проверка нотификации при не заполненных полях")
+    void SwagLabsCreatOrderTest() {
+
+        // Открытие страницы,успешная авторизация
+        authPage.AccessAuthWithConfig()
+                .addToCart()
+                .OpenCheckout()
+                .CheckItem()
+
+                .ContinueClick()
+                .checkoutNotification("Error: First Name is required");
+
+        // Закрытие браузера
+        closeWebDriver();
+
+    }
+
 
 }

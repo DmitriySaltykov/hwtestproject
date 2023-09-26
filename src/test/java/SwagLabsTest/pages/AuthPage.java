@@ -1,6 +1,7 @@
 package SwagLabsTest.pages;
 
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -59,6 +60,7 @@ public class AuthPage {
         $(".app_logo").shouldBe(visible);
 
     }
+
     // Добавление товара в корзину
     public AuthPage addToCart() {
         $(".btn_primary").click();
@@ -71,12 +73,14 @@ public class AuthPage {
 
         return this;
     }
-//Клик по картчоке товара
+
+    //Клик по картчоке товара
     public AuthPage inventoryClick() {
         $(".inventory_item_img").click();
 
         return this;
     }
+
     // Проверка заполнения полей с информацие о товаре
     public AuthPage CheckDetails() {
         $(".inventory_details_name").shouldNotBe(empty);
@@ -85,23 +89,27 @@ public class AuthPage {
         return this;
 
     }
+
     //Проверка текста в кнопке
     public AuthPage CheckBtn() {
         $(".btn_primary").shouldHave(text("ADD TO CART"));
 
         return this;
     }
+
     public AuthPage CheckBtnRemove() {
         $(".btn_primary").shouldHave(text("Remove"));
 
         return this;
     }
+
     //Раскрытие бургера-меню
     public AuthPage OpenBurger() {
         $(".bm-burger-button").click();
 
         return this;
     }
+
     //Нажатие на кнопку логаут
     public AuthPage Logout() {
         $("#logout_sidebar_link").click();
@@ -110,7 +118,8 @@ public class AuthPage {
     }
 
 
-     static final String CONFIG_FILE = "config.properties";
+    static final String CONFIG_FILE = "config.properties";
+
     private Properties loadConfig() {
         Properties properties = new Properties();
 
@@ -122,6 +131,7 @@ public class AuthPage {
 
         return properties;
     }
+
     public AuthPage AccessAuthWithConfig() {
         Properties properties = loadConfig();
 
@@ -140,7 +150,7 @@ public class AuthPage {
         return this;
     }
 
-        //Проверка наличия товара в корзине
+    //Проверка наличия товара в корзине
     public AuthPage CheckItem() {
         $(".cart_item").should(exist);
 
@@ -148,9 +158,25 @@ public class AuthPage {
     }
 
     //Клик на кнопку чекаута
-    public AuthPage ChecoutClick() {
+    public AuthPage CheckoutClick() {
         $("#checkout").should(exist);
+
+
 
         return this;
     }
+
+    // Клик на кнопку продолжить
+    public AuthPage ContinueClick() {
+        $("#page_wrapper.continue").click();
+
+        return this;
+    }
+
+    public void checkoutNotification(String value) {
+        $("#error-message-container error").shouldHave(text(value));
+
+
+    }
+
 }
