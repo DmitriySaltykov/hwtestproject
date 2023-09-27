@@ -66,52 +66,11 @@ public class AuthPage {
 
     }
 
-//    // Добавление товара в корзину
-//    public AuthPage addToCart() {
-//        $(".btn_primary").click();
-//        return this;
-//
-//    }
-//
-//    public AuthPage CheckText() {
-//        $(".shopping_cart_badge").shouldNotBe(empty);
-//
-//        return this;
-//    }
-
-//    //Клик по картчоке товара
-//    public AuthPage inventoryClick() {
-//        $(".inventory_item_img").click();
-//
-//        return this;
-//    }
-//
-//    // Проверка заполнения полей с информацие о товаре
-//    public AuthPage CheckDetails() {
-//        $(".inventory_details_name").shouldNotBe(empty);
-//        $(".inventory_details_desc").shouldNotBe(empty);
-//        $(".inventory_details_price").shouldNotBe(empty);
-//        return this;
-//
-//    }
-//
-//    //Проверка текста в кнопке
-//    public AuthPage CheckBtn() {
-//        $(".btn_primary").shouldHave(text("ADD TO CART"));
-//
-//        return this;
-//    }
-//
-//    public AuthPage CheckBtnRemove() {
-//        $(".btn_primary").shouldHave(text("Remove"));
-//
-//        return this;
-//    }
-
     //Раскрытие бургера-меню и логаут
     public AuthPage OpenBurger() {
         openburger.click();
-               return this;
+
+        return this;
     }
 
     //Нажатие на кнопку логаут
@@ -147,39 +106,5 @@ public class AuthPage {
         return this;
     }
 
-//    //Нажатие на кнопку корзины
-//    public AuthPage OpenCheckout() {
-//        $("#shopping_cart_container").click();
-//
-//        return this;
-//    }
-
-//    //Проверка наличия товара в корзине
-//    public AuthPage CheckItem() {
-//        $(".cart_item").should(exist);
-//
-//        return this;
-//    }
-
-    //Клик на кнопку чекаута
-    public AuthPage CheckoutClick() {
-        $("#checkout").click();
-
-
-        return this;
-    }
-
-    // Клик на кнопку продолжить
-    public AuthPage ContinueClick() {
-        $("#continue").click();
-
-        return this;
-    }
-
-    public void checkoutNotification(String value) {
-        $("#error-message-container error").shouldHave(text(value));
-
-
-    }
 
 }

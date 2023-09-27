@@ -30,8 +30,8 @@ public class CheckPage {
 
     // Клик на кнопку продолжить
     public CheckPage ContinueClick() {
-//        $(By.id("continue")).click();
-        $("[id='continue']").click();
+        $(By.id("continue")).click();
+       // $("[id='continue']").click();
 
         return this;
     }
