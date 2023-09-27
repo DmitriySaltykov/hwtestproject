@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 
 
-public class SwagLabsTest {
+public class SwagLabsAuthTest {
 
     AuthPage authPage = new AuthPage();
 
@@ -36,8 +36,7 @@ public class SwagLabsTest {
     void SwagLabsELogTest() {
         // Открытие страницы и заполнение не валдиными значениями
         authPage.openPage()
-                .setFirstName("firstName")
-                .setLastName("Vit")
+                .setName("Dim","Vit")
                 .clickButton()
                 .checkResult("Epic sadface: Username and password do not match any user in this service");
 

@@ -1,7 +1,6 @@
 package SwagLabsTest.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +13,10 @@ public class AuthPage {
 
     SelenideElement firstNameInput = $("#user-name"),
             lastNameInput = $("#password"),
-            loginbutton = $("#login-button");
+            loginbutton = $("#login-button"),
+            checkresultwindow = $("#login_button_container > div > form > div.error-message-container.error"),
+            openburger = $(".bm-burger-button"),
+            logout = $("#logout_sidebar_link");
 
 
     public AuthPage openPage() {
@@ -32,17 +34,19 @@ public class AuthPage {
         return this;
     }
 
-    public AuthPage setFirstName(String value) {
-        firstNameInput.setValue(value);
+    public AuthPage setName(String firstName, String lastname) {
+        firstNameInput.setValue(firstName);
+        lastNameInput.setValue(lastname);
+
 
         return this;
     }
 
-    public AuthPage setLastName(String value) {
-        lastNameInput.setValue(value);
-
-        return this;
-    }
+//    public AuthPage setLastName(String value) {
+//        lastNameInput.setValue(value);
+//
+//        return this;
+//    }
 
     public AuthPage clickButton() {
         loginbutton.click();
@@ -51,7 +55,8 @@ public class AuthPage {
     }
 
     public void checkResult(String value) {
-        $("#login_button_container > div > form > div.error-message-container.error").shouldHave(text(value));
+
+        checkresultwindow.shouldHave(text(value));
 
 
     }
@@ -61,58 +66,57 @@ public class AuthPage {
 
     }
 
-    // Добавление товара в корзину
-    public AuthPage addToCart() {
-        $(".btn_primary").click();
-        return this;
+//    // Добавление товара в корзину
+//    public AuthPage addToCart() {
+//        $(".btn_primary").click();
+//        return this;
+//
+//    }
+//
+//    public AuthPage CheckText() {
+//        $(".shopping_cart_badge").shouldNotBe(empty);
+//
+//        return this;
+//    }
 
-    }
+//    //Клик по картчоке товара
+//    public AuthPage inventoryClick() {
+//        $(".inventory_item_img").click();
+//
+//        return this;
+//    }
+//
+//    // Проверка заполнения полей с информацие о товаре
+//    public AuthPage CheckDetails() {
+//        $(".inventory_details_name").shouldNotBe(empty);
+//        $(".inventory_details_desc").shouldNotBe(empty);
+//        $(".inventory_details_price").shouldNotBe(empty);
+//        return this;
+//
+//    }
+//
+//    //Проверка текста в кнопке
+//    public AuthPage CheckBtn() {
+//        $(".btn_primary").shouldHave(text("ADD TO CART"));
+//
+//        return this;
+//    }
+//
+//    public AuthPage CheckBtnRemove() {
+//        $(".btn_primary").shouldHave(text("Remove"));
+//
+//        return this;
+//    }
 
-    public AuthPage CheckText() {
-        $(".shopping_cart_badge").shouldNotBe(empty);
-
-        return this;
-    }
-
-    //Клик по картчоке товара
-    public AuthPage inventoryClick() {
-        $(".inventory_item_img").click();
-
-        return this;
-    }
-
-    // Проверка заполнения полей с информацие о товаре
-    public AuthPage CheckDetails() {
-        $(".inventory_details_name").shouldNotBe(empty);
-        $(".inventory_details_desc").shouldNotBe(empty);
-        $(".inventory_details_price").shouldNotBe(empty);
-        return this;
-
-    }
-
-    //Проверка текста в кнопке
-    public AuthPage CheckBtn() {
-        $(".btn_primary").shouldHave(text("ADD TO CART"));
-
-        return this;
-    }
-
-    public AuthPage CheckBtnRemove() {
-        $(".btn_primary").shouldHave(text("Remove"));
-
-        return this;
-    }
-
-    //Раскрытие бургера-меню
+    //Раскрытие бургера-меню и логаут
     public AuthPage OpenBurger() {
-        $(".bm-burger-button").click();
-
-        return this;
+        openburger.click();
+               return this;
     }
 
     //Нажатие на кнопку логаут
     public AuthPage Logout() {
-        $("#logout_sidebar_link").click();
+        logout.click();
 
         return this;
     }
@@ -143,24 +147,23 @@ public class AuthPage {
         return this;
     }
 
-    //Нажатие на кнопку корзины
-    public AuthPage OpenCheckout() {
-        $("#shopping_cart_container").click();
+//    //Нажатие на кнопку корзины
+//    public AuthPage OpenCheckout() {
+//        $("#shopping_cart_container").click();
+//
+//        return this;
+//    }
 
-        return this;
-    }
-
-    //Проверка наличия товара в корзине
-    public AuthPage CheckItem() {
-        $(".cart_item").should(exist);
-
-        return this;
-    }
+//    //Проверка наличия товара в корзине
+//    public AuthPage CheckItem() {
+//        $(".cart_item").should(exist);
+//
+//        return this;
+//    }
 
     //Клик на кнопку чекаута
     public AuthPage CheckoutClick() {
-        $("#checkout").should(exist);
-
+        $("#checkout").click();
 
 
         return this;
@@ -168,7 +171,7 @@ public class AuthPage {
 
     // Клик на кнопку продолжить
     public AuthPage ContinueClick() {
-        $("#page_wrapper.continue").click();
+        $("#continue").click();
 
         return this;
     }

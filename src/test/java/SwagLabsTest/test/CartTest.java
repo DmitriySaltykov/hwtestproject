@@ -2,6 +2,7 @@ package SwagLabsTest.test;
 
 import SwagLabsTest.pages.AuthPage;
 
+import SwagLabsTest.pages.CartPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -10,16 +11,16 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class CartTest {
     AuthPage authPage = new AuthPage();
+    CartPage cartPage = new CartPage();
 
 
     @Test
     @DisplayName("Добавление товара в корзину и проверка счетчика")
     void SwagLabsAddTest() {
-        authPage.AccessAuthWithConfig()
-                .addToCart()
+        authPage.AccessAuthWithConfig();
+        cartPage.addToCart()
                 .CheckText();
-        // Закрытие браузера
-        closeWebDriver();
+
 
     }
     @Test
@@ -27,25 +28,23 @@ public class CartTest {
     void SwagLabsPDPTest() {
 
         // Открытие страницы,успешная авторизация
-        authPage.AccessAuthWithConfig()
-                .inventoryClick()
+        authPage.AccessAuthWithConfig();
+        cartPage.inventoryClick()
                 .CheckDetails()
                 .CheckBtn();
-        // Закрытие браузера
-        closeWebDriver();
+
 
     }
 
     @Test
     @DisplayName("Переход на PDP добавленного товара  и проверка заполнение картчоки товара")
     void SwagLabsAddedPDPTest() {
-        authPage.AccessAuthWithConfig()
-                .addToCart()
+        authPage.AccessAuthWithConfig();
+        cartPage.addToCart()
                 .inventoryClick()
                 .CheckDetails()
                 .CheckBtnRemove();
-        // Закрытие браузера
-        closeWebDriver();
+
 
     }
 
