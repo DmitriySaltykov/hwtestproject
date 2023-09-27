@@ -1,5 +1,7 @@
 package SwagLabsTest.pages;
 
+import org.openqa.selenium.By;
+
 import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -43,7 +45,7 @@ public class CartPage {
     }
 
     public CartPage CheckBtnRemove() {
-        $(".btn_primary").shouldHave(text("Remove"));
+        $(By.id("remove-sauce-labs-backpack")).shouldHave(text("Remove"));
 
         return this;
     }

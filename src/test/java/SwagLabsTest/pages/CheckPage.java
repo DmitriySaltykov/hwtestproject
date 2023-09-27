@@ -1,5 +1,7 @@
 package SwagLabsTest.pages;
 
+import org.openqa.selenium.By;
+
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -28,13 +30,14 @@ public class CheckPage {
 
     // Клик на кнопку продолжить
     public CheckPage ContinueClick() {
-        $("#continue").click();
+//        $(By.id("continue")).click();
+        $("[id='continue']").click();
 
         return this;
     }
 
     public CheckPage checkoutNotification(String value) {
-        $("#error-message-container error").shouldHave(text(value));
+        $("#checkout_info_container > div > form > div.checkout_info > div.error-message-container.error > h3").shouldHave(text(value));
         return this;
 
     }
