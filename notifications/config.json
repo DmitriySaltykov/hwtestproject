@@ -1,9 +1,9 @@
 {
   "base": {
     "logo": "logo.png",
-    "project": "AT STUDY",
-    "environment": "PREPROD",
-    "comment": "rabotayet",
+    "project": "Study UI AT",
+    "environment": "DEV",
+    "comment": "great!",
     "reportLink": "",
     "language": "en",
     "allureFolder": "build/reports/allure-report/allureReport",
