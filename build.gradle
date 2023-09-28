@@ -56,15 +56,25 @@ tasks.withType(Test) {
 test {
     useJUnitPlatform()
 }
-//task parametr_test(type: Test) {
-//    useJUnitPlatform {
-//        includeTags("parametr")
-//    }
-//}
-//
-//task simple_test(type: Test) {
-//    useJUnitPlatform {
-//        includeTags("simple")
-//    }
-// }
+task web_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("web")
+    }
+}
+
+task cart_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("cart")
+    }
+ }
+task login_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("login")
+    }
+}
+task fasets_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("fasets")
+    }
+}
 

@@ -6,6 +6,8 @@ import SwagLabsTest.pages.CheckPage;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
@@ -20,6 +22,10 @@ public class CheckoutTest extends TestBase {
     CheckPage checkPage = new CheckPage();
 
     @Test
+    @Tags({
+            @Tag("web"),
+            @Tag("checkout")
+    })
     @DisplayName("Переход на страницу корзины")
     void SwagLabsCheckoutTest() {
 
@@ -34,6 +40,10 @@ public class CheckoutTest extends TestBase {
     }
 
     @Test
+    @Tags({
+            @Tag("web"),
+            @Tag("checkout")
+    })
     @DisplayName("Переход на страницу оплаты")
     void SwagLabsGoRoPayest() {
 
@@ -47,6 +57,10 @@ public class CheckoutTest extends TestBase {
     }
 
     @Test
+    @Tags({
+            @Tag("web"),
+            @Tag("checkout")
+    })
     @DisplayName("Оформление заказа, проверка нотификации при не заполненных полях")
     void SwagLabsCreatOrderTest() {
 
