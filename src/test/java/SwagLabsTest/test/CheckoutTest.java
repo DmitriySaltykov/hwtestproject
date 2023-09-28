@@ -3,12 +3,18 @@ package SwagLabsTest.test;
 import SwagLabsTest.pages.AuthPage;
 import SwagLabsTest.pages.CartPage;
 import SwagLabsTest.pages.CheckPage;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
-public class CheckoutTest {
+public class CheckoutTest extends TestBase {
+
+    public void CheckoutTest() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    }
     AuthPage authPage = new AuthPage();
     CartPage cartPage = new CartPage();
     CheckPage checkPage = new CheckPage();

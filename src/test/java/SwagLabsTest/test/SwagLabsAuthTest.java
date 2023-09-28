@@ -1,6 +1,8 @@
 package SwagLabsTest.test;
 
 import SwagLabsTest.pages.AuthPage;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -11,7 +13,10 @@ import static com.codeborne.selenide.Selenide.$;
 
 
 
-public class SwagLabsAuthTest {
+public class SwagLabsAuthTest extends TestBase {
+    public void SwaglabsAuthTest() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    }
 
     AuthPage authPage = new AuthPage();
 
