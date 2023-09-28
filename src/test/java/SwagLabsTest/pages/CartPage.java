@@ -14,7 +14,7 @@ public class CartPage {
             detailsname = $(".inventory_details_name"),
             detailsdesc = $(".inventory_details_desc"),
             detailsprice = $(".inventory_details_price"),
-            removebtn = $(By.id("remove-sauce-labs-backpack")),;
+            removebtn = $(By.id("remove-sauce-labs-backpack"));
 
 
     // Добавление товара в корзину
