@@ -18,8 +18,8 @@ public class AuthPage {
             openburger = $(".bm-burger-button"),
             logout = $("#logout_sidebar_link"),
             username = $("#user-name"),
-            password=$("#password"),
-            applogo=$(".app_logo");
+            password = $("#password"),
+            applogo = $(".app_logo");
 
 
     public AuthPage openPage() {
@@ -27,15 +27,13 @@ public class AuthPage {
 
         return this;
     }
-
 //    public AuthPage AccessAuth() {
 //        open("https://www.saucedemo.com/");
 //        username.setValue("standard_user");
 //        password.setValue("secret_sauce");
 //        loginbutton.click();
-//
-//        return this;
-//    }
+// }
+
 
     public AuthPage setName(String firstName, String lastname) {
         firstNameInput.setValue(firstName);
