@@ -13,11 +13,12 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class SortingTest extends  TestBase{
+public class SortingTest extends TestBase {
 
     public void SortingTest() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
+
     @Tags({
             @Tag("web"),
             @Tag("fasets")
@@ -31,7 +32,6 @@ public class SortingTest extends  TestBase{
     })
 
     @ParameterizedTest(name = "Товары на странице сортируются в соответствии с выбраннм фильтром \"{1}\" .")
-
     void SortingTest(String testData, String expectedResult) {
 
         open("https://www.saucedemo.com/");
