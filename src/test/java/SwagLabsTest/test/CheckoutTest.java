@@ -10,13 +10,12 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.closeWebDriver;
-
 public class CheckoutTest extends TestBase {
 
     public void CheckoutTest() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
+
     AuthPage authPage = new AuthPage();
     CartPage cartPage = new CartPage();
     CheckPage checkPage = new CheckPage();
@@ -34,7 +33,6 @@ public class CheckoutTest extends TestBase {
         cartPage.addToCart();
         checkPage.OpenCheckout()
                 .CheckItem();
-
 
 
     }
@@ -71,7 +69,6 @@ public class CheckoutTest extends TestBase {
                 .CheckItem()
                 .ContinueClick()
                 .checkoutNotification("Error: First Name is required");
-
 
 
     }

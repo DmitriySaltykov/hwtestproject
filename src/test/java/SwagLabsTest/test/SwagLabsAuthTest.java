@@ -9,10 +9,6 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 
-import static com.codeborne.selenide.Selenide.$;
-
-
-
 public class SwagLabsAuthTest extends TestBase {
     public void SwaglabsAuthTest() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
@@ -41,7 +37,7 @@ public class SwagLabsAuthTest extends TestBase {
     void SwagLabsELogTest() {
         // Открытие страницы и заполнение не валдиными значениями
         authPage.openPage()
-                .setName("Dim","Vit")
+                .setName("Dim", "Vit")
                 .clickButton()
                 .checkResult("Epic sadface: Username and password do not match any user in this service");
 
@@ -60,8 +56,9 @@ public class SwagLabsAuthTest extends TestBase {
 
 
     }
+
     @Test
-        @Tags({
+    @Tags({
             @Tag("web"),
             @Tag("login"),
     })

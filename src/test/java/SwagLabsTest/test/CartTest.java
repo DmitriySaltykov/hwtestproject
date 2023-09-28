@@ -11,12 +11,11 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 
-import static com.codeborne.selenide.Selenide.closeWebDriver;
-
-public class CartTest  extends  TestBase{
+public class CartTest extends TestBase {
     public void CartTest() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
+
     AuthPage authPage = new AuthPage();
     CartPage cartPage = new CartPage();
 
@@ -34,6 +33,7 @@ public class CartTest  extends  TestBase{
 
 
     }
+
     @Test
     @Tags({
             @Tag("web"),

@@ -42,12 +42,6 @@ public class AuthPage {
         return this;
     }
 
-//    public AuthPage setLastName(String value) {
-//        lastNameInput.setValue(value);
-//
-//        return this;
-//    }
-
     public AuthPage clickButton() {
         loginbutton.click();
 

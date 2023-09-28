@@ -14,12 +14,14 @@ public class CheckPage {
 
         return this;
     }
+
     //Проверка наличия товара в корзине
     public CheckPage CheckItem() {
         $(".cart_item").should(exist);
 
         return this;
     }
+
     //Клик на кнопку чекаута
     public CheckPage CheckoutClick() {
         $("#checkout").click();
@@ -31,7 +33,7 @@ public class CheckPage {
     // Клик на кнопку продолжить
     public CheckPage ContinueClick() {
         $(By.id("continue")).click();
-       // $("[id='continue']").click();
+        // $("[id='continue']").click();
 
         return this;
     }
