@@ -10,9 +10,7 @@ import org.junit.jupiter.api.Test;
 
 
 public class SwagLabsAuthTest extends TestBase {
-    public void SwaglabsAuthTest() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
+
 
     AuthPage authPage = new AuthPage();
 

@@ -27,12 +27,7 @@ public class AuthPage {
 
         return this;
     }
-//    public AuthPage AccessAuth() {
-//        open("https://www.saucedemo.com/");
-//        username.setValue("standard_user");
-//        password.setValue("secret_sauce");
-//        loginbutton.click();
-// }
+
 
 
     public AuthPage setName(String firstName, String lastname) {

@@ -12,9 +12,7 @@ import org.junit.jupiter.api.Test;
 
 public class CheckoutTest extends TestBase {
 
-    public void CheckoutTest() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
+
 
     AuthPage authPage = new AuthPage();
     CartPage cartPage = new CartPage();

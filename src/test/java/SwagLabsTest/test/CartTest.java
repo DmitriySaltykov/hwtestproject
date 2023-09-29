@@ -12,9 +12,7 @@ import org.junit.jupiter.api.Test;
 
 
 public class CartTest extends TestBase {
-    public void CartTest() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
+
 
     AuthPage authPage = new AuthPage();
     CartPage cartPage = new CartPage();

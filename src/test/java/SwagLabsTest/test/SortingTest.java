@@ -15,9 +15,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class SortingTest extends TestBase {
 
 
-    public void SortingTest() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
 
     @Tags({
             @Tag("web"),
