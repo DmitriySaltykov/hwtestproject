@@ -60,7 +60,7 @@
 ### Локальный запуск тестов
 
 
-## <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>"> Удаленный запуск тестов в Jenkins
+## <img width="4%" title="Jenkins" src="readme_design/logo/Jenkins.svg"> Удаленный запуск тестов в Jenkins
 
 > Для запуска тестов используется параметризированная сборка
 
