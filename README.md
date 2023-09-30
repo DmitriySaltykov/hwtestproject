@@ -27,7 +27,6 @@
 - [x] Оформление заказа
 
 ## Технологический стек
-
 <p align="center">
 <img width="6%" title="IntelliJ IDEA" src="readme_design/logo/Intelij_IDEA.svg">
 <img width="6%" title="Java" src="readme_design/logo/Java.svg">
@@ -40,6 +39,7 @@
 <img width="6%" title="Jenkins" src="readme_design/logo/Jenkins.svg">
 <img width="6%" title="Telegram" src="readme_design/logo/Telegram.svg">
 </p>
+
 
 ### В данном проекте автотесты написаны на <code>Java</code> с использованием <code>Selenide</code> для UI-тестов.
 >
