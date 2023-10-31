@@ -65,6 +65,7 @@ public class CheckoutTest extends TestBase {
         cartPage.addToCart();
         checkPage.OpenCheckout()
                 .CheckItem()
+                .CheckoutClick()
                 .ContinueClick()
                 .checkoutNotification("Error: First Name is required");
 
