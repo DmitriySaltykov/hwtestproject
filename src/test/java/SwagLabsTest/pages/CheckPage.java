@@ -3,8 +3,14 @@ package SwagLabsTest.pages;
 import com.codeborne.selenide.SelenideElement;
 
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+import static SwagLabsTest.pages.AuthPage.CONFIG_FILE;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class CheckPage {
     SelenideElement shopingicon = $("#shopping_cart_container"),
@@ -13,9 +19,6 @@ public class CheckPage {
             craatorder = $("#continue"),
             checkoutnotification = $("#checkout_info_container > div > form > div.checkout_info > div.error-message-container.error"),
 
-    firstNameInput = $("#first-name"),
-    lastNameInput = $("#last-name"),
-    zipInput = $("#postal-code"),
     finishbutton = $("#finish"),
     finalnotification = $("#checkout_complete_container");
     //Нажатие на кнопку корзины
@@ -54,14 +57,7 @@ public class CheckPage {
 
     }
 
-    public CheckPage setName(String firstName, String lastname,String zip) {
-        firstNameInput.setValue(firstName);
-        lastNameInput.setValue(lastname);
-        zipInput.setValue(zip);
 
-
-        return this;
-    }
 
     public CheckPage FinishClick() {
         finishbutton.click();
@@ -73,6 +69,29 @@ public class CheckPage {
         finalnotification.shouldHave(text(value));
         return this;
 
+    }
+    private Properties loadConfig() {
+        Properties properties = new Properties();
+
+        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(CONFIG_FILE)) {
+            properties.load(inputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return properties;
+    }
+    public CheckPage AccessClientInfo() {
+        Properties properties = loadConfig();
+
+        open("https://www.saucedemo.com/");
+        $("#first-name").setValue(properties.getProperty("firstname"));
+        $("#last-name").setValue(properties.getProperty("lastname"));
+        $("#postal-code").setValue(properties.getProperty("zipcode"));
+
+
+
+        return this;
     }
 
 }

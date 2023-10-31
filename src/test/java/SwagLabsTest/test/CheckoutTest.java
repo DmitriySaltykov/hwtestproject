@@ -85,10 +85,10 @@ public class CheckoutTest extends TestBase {
         checkPage.OpenCheckout()
                 .CheckItem()
                 .CheckoutClick()
-                 .setName("Dim","Vit",5426)
+                .AccessClientInfo()
                 .ContinueClick()
                 .FinishClick()
-                .FinalSucsessNotification();
+                .FinalSucsessNotification("Thank you for your order!");
 
 
 
