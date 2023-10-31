@@ -84,12 +84,9 @@ public class CheckPage {
     public CheckPage AccessClientInfo() {
         Properties properties = loadConfig();
 
-        open("https://www.saucedemo.com/");
-        $("#first-name").setValue(properties.getProperty("firstname"));
+                $("#first-name").setValue(properties.getProperty("firstname"));
         $("#last-name").setValue(properties.getProperty("lastname"));
         $("#postal-code").setValue(properties.getProperty("zipcode"));
-
-
 
         return this;
     }
