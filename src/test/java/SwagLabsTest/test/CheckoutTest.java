@@ -58,7 +58,7 @@ public class CheckoutTest extends TestBase {
             @Tag("checkout")
     })
     @DisplayName("Оформление заказа, проверка нотификации при не заполненных полях")
-    void SwagLabsCreatOrderTest() {
+    void SwagLabsCreatOrderCheckNotificationTest() {
 
         // Открытие страницы,успешная авторизация
         authPage.AccessAuthWithConfig();
@@ -68,6 +68,29 @@ public class CheckoutTest extends TestBase {
                 .CheckoutClick()
                 .ContinueClick()
                 .checkoutNotification("Error: First Name is required");
+
+
+    }
+    @Test
+    @Tags({
+            @Tag("web"),
+            @Tag("checkout")
+    })
+    @DisplayName("Оформление заказа, проверка нотификации при не заполненных полях")
+    void SucsessCreatOrderTest() {
+
+        // Открытие страницы,успешная авторизация
+        authPage.AccessAuthWithConfig();
+        cartPage.addToCart();
+        checkPage.OpenCheckout()
+                .CheckItem()
+                .CheckoutClick()
+                 .setName("Dim","Vit",5426)
+                .ContinueClick()
+                .FinishClick()
+                .FinalSucsessNotification();
+
+
 
 
     }

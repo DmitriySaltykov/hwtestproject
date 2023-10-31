@@ -1,7 +1,7 @@
 package SwagLabsTest.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
+
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
@@ -11,9 +11,13 @@ public class CheckPage {
             cartitem = $(".cart_item"),
             checkoutbtn = $("#checkout"),
             craatorder = $("#continue"),
-            checkoutnotification = $("#checkout_info_container > div > form > div.checkout_info > div.error-message-container.error");
+            checkoutnotification = $("#checkout_info_container > div > form > div.checkout_info > div.error-message-container.error"),
 
-
+    firstNameInput = $("#first-name"),
+    lastNameInput = $("#last-name"),
+    zipInput = $("#postal-code"),
+    finishbutton = $("#finish"),
+    finalnotification = $("#checkout_complete_container");
     //Нажатие на кнопку корзины
     public CheckPage OpenCheckout() {
         shopingicon.click();
@@ -39,7 +43,7 @@ public class CheckPage {
     // Клик на кнопку продолжить
     public CheckPage ContinueClick() {
         craatorder.click();
-        // $("[id='continue']").click();
+
 
         return this;
     }
@@ -49,4 +53,26 @@ public class CheckPage {
         return this;
 
     }
+
+    public CheckPage setName(String firstName, String lastname,String zip) {
+        firstNameInput.setValue(firstName);
+        lastNameInput.setValue(lastname);
+        zipInput.setValue(zip);
+
+
+        return this;
+    }
+
+    public CheckPage FinishClick() {
+        finishbutton.click();
+
+
+        return this;
+    }
+    public CheckPage FinalSucsessNotification(String value) {
+        finalnotification.shouldHave(text(value));
+        return this;
+
+    }
+
 }

@@ -17,9 +17,7 @@ public class AuthPage {
             checkresultwindow = $("#login_button_container > div > form > div.error-message-container.error"),
             openburger = $(".bm-burger-button"),
             logout = $("#logout_sidebar_link"),
-            username = $("#user-name"),
-            password = $("#password"),
-            applogo = $(".app_logo");
+                      applogo = $(".app_logo");
 
 
     public AuthPage openPage() {
