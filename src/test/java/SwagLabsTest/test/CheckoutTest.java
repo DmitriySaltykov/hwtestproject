@@ -76,7 +76,7 @@ public class CheckoutTest extends TestBase {
             @Tag("web"),
             @Tag("checkout")
     })
-    @DisplayName("Оформление заказа, проверка нотификации при не заполненных полях")
+    @DisplayName("Оформление заказа, проверка нотификации при успешном оформлении заказа")
     void SucsessCreatOrderTest() {
 
         // Открытие страницы,успешная авторизация
