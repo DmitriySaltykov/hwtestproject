@@ -77,9 +77,12 @@ task fasets_test(type: Test) {
     useJUnitPlatform {
         includeTags("fasets")
     }
+}
+
     task checkout_test(type: Test) {
         useJUnitPlatform {
             includeTags("checkout")
         }
+}
 }
 
