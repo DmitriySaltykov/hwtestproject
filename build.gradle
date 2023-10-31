@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
     id 'io.qameta.allure' version '2.11.2'
+    id "io.freefair.lombok" version "8.3"
 }
 
 repositories {
@@ -76,5 +77,9 @@ task fasets_test(type: Test) {
     useJUnitPlatform {
         includeTags("fasets")
     }
+    task checkout_test(type: Test) {
+        useJUnitPlatform {
+            includeTags("checkout")
+        }
 }
 
