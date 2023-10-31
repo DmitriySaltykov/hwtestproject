@@ -10,7 +10,7 @@ public class CheckPage {
     SelenideElement shopingicon = $("#shopping_cart_container"),
             cartitem = $(".cart_item"),
             checkoutbtn = $("#checkout"),
-            craatorder = $(By.id("#continue")),
+            craatorder = $(("#continue")),
             checkoutnotification = $(By.id("continue"));
 
 
