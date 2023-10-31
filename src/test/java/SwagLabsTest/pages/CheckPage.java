@@ -9,8 +9,8 @@ import static com.codeborne.selenide.Selenide.$;
 public class CheckPage {
     SelenideElement shopingicon = $("#shopping_cart_container"),
             cartitem = $(".cart_item"),
-            checkoutbtn = $(".checkout"),
-            craatorder = $(By.id("continue")),
+            checkoutbtn = $("#checkout"),
+            craatorder = $(By.id("#continue")),
             checkoutnotification = $(By.id("continue"));
 
 
