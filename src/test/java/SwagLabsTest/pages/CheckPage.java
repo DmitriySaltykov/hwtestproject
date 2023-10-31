@@ -11,7 +11,7 @@ public class CheckPage {
             cartitem = $(".cart_item"),
             checkoutbtn = $("#checkout"),
             craatorder = $("#continue"),
-            checkoutnotification = $(By.id("continue"));
+            checkoutnotification = $("error-message-container error");
 
 
     //Нажатие на кнопку корзины
