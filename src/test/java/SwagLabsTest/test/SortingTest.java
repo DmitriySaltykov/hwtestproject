@@ -1,10 +1,12 @@
 package SwagLabsTest.test;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -31,7 +33,7 @@ public class SortingTest extends TestBase {
     @ParameterizedTest(name = "Товары на странице сортируются в соответствии с выбраннм фильтром \"{1}\" .")
     void SortingTest(String testData, String expectedResult) {
 
-        open("https://www.saucedemo.com/");
+       open("https://www.saucedemo.com/");
         $("#user-name").setValue("standard_user");
         $("#password").setValue("secret_sauce");
         $("#login-button").click();
