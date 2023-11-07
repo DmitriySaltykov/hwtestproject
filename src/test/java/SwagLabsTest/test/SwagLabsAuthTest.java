@@ -41,12 +41,12 @@ public class SwagLabsAuthTest extends TestBase {
     @DisplayName("Проверка наличия нотификации при не валидных данных")
     void SwagLabsELogTest() {
         step("Открытие страницы", () -> {
-        authPage.openPage()
+        authPage.openPage();
         });
         step("Установка не валидных значений", () -> {
             authPage
                 .setName("Dim", "Vit")
-                .clickButton()
+                .clickButton();
         });
         step("Проверка наличия нотификации", () -> {
             authPage
