@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
+import static io.qameta.allure.Allure.step;
+
 
 public class CartTest extends TestBase {
 
@@ -25,10 +27,17 @@ public class CartTest extends TestBase {
     })
     @DisplayName("Добавление товара в корзину и проверка счетчика")
     void SwagLabsAddTest() {
-        authPage.AccessAuthWithConfig();
-        cartPage.addToCart()
-                .CheckText();
 
+        // Открытие страницы,успешная авторизация
+        step("Открытие страницы и успешная авторизация", () -> {
+            authPage
+                    .AccessAuthWithConfig();
+        });
+
+        step("Добавление товара в корзину и проверка изменения счетчика корзины", () -> {
+            cartPage.addToCart()
+            .CheckText();
+        });
 
     }
 
@@ -41,12 +50,15 @@ public class CartTest extends TestBase {
     void SwagLabsPDPTest() {
 
         // Открытие страницы,успешная авторизация
-        authPage.AccessAuthWithConfig();
+        step("Открытие страницы и успешная авторизация", () -> {
+            authPage
+                    .AccessAuthWithConfig();
+        });
+        step("Переход на карточку товара и проверка заполнения полей с информацие о товаре", () -> {
         cartPage.inventoryClick()
                 .CheckDetails()
                 .CheckBtn();
-
-
+        });
     }
 
     @Test
@@ -54,14 +66,21 @@ public class CartTest extends TestBase {
             @Tag("web"),
             @Tag("cart")
     })
-    @DisplayName("Переход на PDP добавленного товара  и проверка заполнение картчоки товара")
+    @DisplayName("Переход на PDP добавленного товара  и удаление  добавленного товара")
     void SwagLabsAddedPDPTest() {
-        authPage.AccessAuthWithConfig();
+        step("Открытие страницы и успешная авторизация", () -> {
+            authPage
+                    .AccessAuthWithConfig();
+        });
+        step("Переход на карточку товара и проверка заполнения полей с информацие о товаре", () -> {
         cartPage.addToCart()
                 .inventoryClick()
-                .CheckDetails()
-                .CheckBtnRemove();
-
+                .CheckDetails();
+        });
+        step("Удаление товара из корзины ", () -> {
+            cartPage
+                    .CheckBtnRemove();
+        });
 
     }
 
