@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
+import static io.qameta.allure.Allure.step;
+
 public class CheckoutTest extends TestBase {
 
 
@@ -27,10 +29,18 @@ public class CheckoutTest extends TestBase {
     void SwagLabsCheckoutTest() {
 
         // Открытие страницы,успешная авторизация
-        authPage.AccessAuthWithConfig();
-        cartPage.addToCart();
+        step("Открытие страницы и успешная авторизация", () -> {
+        authPage
+                .AccessAuthWithConfig();
+        });
+
+        step("Добавление товара в корзину ", () -> {
+            cartPage.addToCart();
+        });
+        step("Открытие страницы чекаута и проверка наличия добавленного товара ", () -> {
         checkPage.OpenCheckout()
                 .CheckItem();
+        });
 
 
     }
