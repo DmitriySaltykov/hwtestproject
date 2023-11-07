@@ -60,7 +60,7 @@
 ### Локальный запуск тестов
 
 
-## <img width="4%" title="Jenkins" src="readme_design/logo/Jenkins.svg"> Удаленный запуск тестов в Jenkins
+## <img width="4%" title="Jenkins" src="readme_design/logo/Jenkins.svg"> Удаленный запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/hw_web_test_project//)
 
 > Для запуска тестов используется параметризированная сборка
 
@@ -68,7 +68,7 @@
 <img title="Jenkins" src="readme_design/screens/img.png">
 </p>
 
-## <img width="4%" title="Allure_Report" src="readme_design/logo/Allure_Report.svg"> Главная страница allure отчета
+## <img width="4%" title="Allure_Report" src="readme_design/logo/Allure_Report.svg"> Главная страница [allure](https://jenkins.autotests.cloud/job/hw_web_test_project/27/allure/) отчета
 
 <p align="center">
 <img title="Allure_main" src="readme_design/screens/img_2.png">
