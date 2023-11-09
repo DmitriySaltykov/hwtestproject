@@ -1,4 +1,8 @@
 # Проект по автоматизации тестирования web приложения 
+<p align="center">
+<img title="Jenkins" src="readme_design/screens/img_8.png">
+</p>
+
 
 ## 	Содержание
 
