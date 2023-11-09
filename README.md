@@ -130,6 +130,8 @@ ____
 
 > К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
 
-<p align="center">
-<img title="Selenoid_gif" src="readme_design/gifs/test_video1.mp4">
-</p>
+[//]: # (<p align="center">)
+
+[//]: # (<img title="Selenoid_gif" src="readme_design/gifs/test_video1.mp4">)
+
+[//]: # (</p>)
