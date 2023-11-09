@@ -86,6 +86,32 @@
 <img title="Allure_dashboard" src="readme_design/screens/img_4.png">
 </p>
 
+<a id="интеграция-с-allure-testops"></a>
+
+## <img alt="Allure_TO" height="25" src="images/logo/Allure_TO.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3769/dashboards">Allure TestOps</a>
+
+## 🖨️ Основная страница отчёта
+
+<p align="center">  
+<img title="Allure TestOps Dashboard" src="images/screen/img_5.png" width="850">  
+</p>  
+
+## 📄 Автоматизированные тест-кейсы
+
+<p align="center">  
+<img title="Allure Tests" src="images/screen/img_6.png" width="850">  
+</p>
+
+<a id="интеграция-с-jira"></a>
+
+## <img alt="Allure" height="25" src="images/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-922">Jira</a>
+
+<p align="center">  
+<img title="Jira" src="images/screen/JiraMain.png" width="">  
+</p>
+
+____
+
 ## <img width="4%" title="Telegram" src="readme_design/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 
 > После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне.
