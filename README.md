@@ -93,21 +93,21 @@
 ## 🖨️ Основная страница отчёта
 
 <p align="center">  
-<img title="Allure TestOps Dashboard" src="images/screen/img_5.png" width="850">  
+<img title="Allure TestOps Dashboard" src="readme_design/screens/img_5.png" width="850">  
 </p>  
 
 ## 📄 Автоматизированные тест-кейсы
 
 <p align="center">  
-<img title="Allure Tests" src="images/screen/img_6.png" width="850">  
+<img title="Allure Tests" src="readme_design/screens/img_6.png" width="850">  
 </p>
 
 <a id="интеграция-с-jira"></a>
 
-## <img alt="Allure" height="25" src="images/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-922">Jira</a>
+## <img alt="Allure" height="25" src="images/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-942">Jira</a>
 
 <p align="center">  
-<img title="Jira" src="images/screen/JiraMain.png" width="">  
+<img title="Jira" src="readme_design/screens/img_7.png" width="">  
 </p>
 
 ____
