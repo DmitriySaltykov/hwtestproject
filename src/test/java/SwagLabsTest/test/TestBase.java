@@ -1,5 +1,8 @@
 package SwagLabsTest.test;
 
+import SwagLabsTest.config.ConfigReader;
+import SwagLabsTest.config.WebConfig;
+import SwagLabsTest.config.WebConfigProject;
 import SwagLabsTest.helpers.Attach;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -14,6 +17,11 @@ import java.util.Map;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
+    private static final WebConfig config = ConfigReader.Instance.read();
+    @BeforeAll
+    public static void beforeAll(){
+        WebConfigProject webConfigProject = new WebConfigProject(config);
+        webConfigProject.webConfig();}
     @BeforeEach
     void adddListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
@@ -30,23 +38,23 @@ public class TestBase {
         closeWebDriver();
     }
 
-    @BeforeAll
-    static void beforeAll() {
-
-        Configuration.browserSize = System.getProperty("browserSize");
-        Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion");
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.remote = System.getProperty("remoteDriverUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
-
-        Configuration.browserCapabilities = capabilities;
-    }
+//    @BeforeAll
+//    static void beforeAll() {
+//
+//        Configuration.browserSize = System.getProperty("browserSize");
+//        Configuration.browser = System.getProperty("browser", "chrome");
+//        Configuration.browserVersion = System.getProperty("browserVersion");
+//        Configuration.pageLoadStrategy = "eager";
+//        Configuration.remote = System.getProperty("remoteDriverUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+//
+//        DesiredCapabilities capabilities = new DesiredCapabilities();
+//        capabilities.setCapability("selenoid:options", Map.of(
+//                "enableVNC", true,
+//                "enableVideo", true
+//        ));
+//
+//        Configuration.browserCapabilities = capabilities;
+//    }
 
 
 }
