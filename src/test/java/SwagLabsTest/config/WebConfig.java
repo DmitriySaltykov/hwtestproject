@@ -26,7 +26,7 @@ import org.aeonbits.owner.Config;
         String getBaseUrl();
 
         @Key("isRemote")
-        @DefaultValue("true")
+        @DefaultValue("false")
         Boolean isRemote();
 
         @Key("remoteUrl")
