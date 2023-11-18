@@ -21,7 +21,7 @@ public class AuthPage {
 
 
     public AuthPage openPage() {
-        open("https://www.saucedemo.com/");
+        open("");
 
         return this;
     }
@@ -86,7 +86,7 @@ public class AuthPage {
     public AuthPage AccessAuthWithConfig() {
         Properties properties = loadConfig();
 
-        open("https://www.saucedemo.com/");
+        open("");
         $("#user-name").setValue(properties.getProperty("username"));
         $("#password").setValue(properties.getProperty("password"));
         loginbutton.click();

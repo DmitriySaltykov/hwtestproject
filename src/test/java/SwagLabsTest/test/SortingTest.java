@@ -33,7 +33,7 @@ public class SortingTest extends TestBase {
     @ParameterizedTest(name = "Товары на странице сортируются в соответствии с выбраннм фильтром \"{1}\" .")
     void SortingTest(String testData, String expectedResult) {
 
-       open("https://www.saucedemo.com/");
+       open("");
         $("#user-name").setValue("standard_user");
         $("#password").setValue("secret_sauce");
         $("#login-button").click();
