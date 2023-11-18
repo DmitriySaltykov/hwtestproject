@@ -10,7 +10,7 @@ import org.aeonbits.owner.Config;
 
         @Key("browser")
         @DefaultValue("CHROME")
-        Browser getBrowser();
+        String getBrowser();
 
 
         @Key("browserVersion")

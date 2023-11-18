@@ -14,7 +14,7 @@ public class WebConfigProject {
 
     public void webConfig() {
         Configuration.baseUrl = webConfig.getBaseUrl();
-        Configuration.browser = webConfig.getBrowser().toString();
+        Configuration.browser = webConfig.getBrowser();
         Configuration.browserVersion = webConfig.getBrowserVersion();
         Configuration.browserSize = webConfig.getBrowserSize();
         Configuration.pageLoadStrategy = "eager";
