@@ -61,6 +61,27 @@
 
 ## Запуск тестов из терминала
 
+
+#### Удалённый запуск через заранее подготовленный property файл
+
+> Создаём property файл с необходимыми параметрами и кладём его в <code>test.resources</code>
+>
+> Запускаем тесты, используя созданный property файл
+>
+> <code>gradle clean test -Denvironment=remote</code>
+> 
+
+
+##### Пример файла
+```
+browserName=chrome
+browserVersion=108
+baseUrl=https://www.saucedemo.com
+browserSize=1920x1080
+isRemote=false
+remoteUrl=https://selenoid.autotests.cloud
+```
+
 ### Локальный запуск тестов
 
 
