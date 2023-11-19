@@ -82,7 +82,7 @@ isRemote=false
 remoteUrl=https://selenoid.autotests.cloud
 ```
 
-### Локальный запуск тестов
+
 
 
 ## <img width="4%" title="Jenkins" src="readme_design/logo/Jenkins.svg"> Удаленный запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/hw_web_test_project//)
