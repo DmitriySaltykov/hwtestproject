@@ -115,7 +115,7 @@ remoteUrl=https://selenoid.autotests.cloud
 
 ## <img alt="Allure_TO" height="25" src="readme_design/logo/Allure_TO.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3769/dashboards">Allure TestOps</a>
 
-## 🖨️ Основная страница отчёта
+## 🖨️ Основная страница  отчёта
 
 <p align="center">  
 <img title="Allure TestOps Dashboard" src="readme_design/screens/img_5.png" width="850">  
