@@ -153,5 +153,5 @@ ____
 
 
 <p align="center">
-<img title="Selenoid Video" src="readme_design/screens/video_test.gif" width="550" height="350"  alt="video">   
+<img title="Selenoid Video" src="readme_design/screens/video_test_1 .gif" width="550" height="350"  alt="video">   
 </p>
