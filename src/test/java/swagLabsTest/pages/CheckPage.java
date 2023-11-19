@@ -1,4 +1,4 @@
-package SwagLabsTest.pages;
+package swagLabsTest.pages;
 
 import com.codeborne.selenide.SelenideElement;
 
@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import static SwagLabsTest.pages.AuthPage.CONFIG_FILE;
+import static swagLabsTest.pages.AuthPage.CONFIG_FILE;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -22,21 +22,21 @@ public class CheckPage {
     finishbutton = $("#finish"),
     finalnotification = $("#checkout_complete_container");
     //Нажатие на кнопку корзины
-    public CheckPage OpenCheckout() {
+    public CheckPage openCheckout() {
         shopingicon.click();
 
         return this;
     }
 
     //Проверка наличия товара в корзине
-    public CheckPage CheckItem() {
+    public CheckPage checkItem() {
         cartitem.should(exist);
 
         return this;
     }
 
     //Клик на кнопку чекаута
-    public CheckPage CheckoutClick() {
+    public CheckPage checkoutClick() {
         checkoutbtn.click();
 
 
@@ -44,7 +44,7 @@ public class CheckPage {
     }
 
     // Клик на кнопку продолжить
-    public CheckPage ContinueClick() {
+    public CheckPage continueClick() {
         craatorder.click();
 
 
@@ -59,13 +59,13 @@ public class CheckPage {
 
 
 
-    public CheckPage FinishClick() {
+    public CheckPage finishClick() {
         finishbutton.click();
 
 
         return this;
     }
-    public CheckPage FinalSucsessNotification(String value) {
+    public CheckPage finalSucsessNotification(String value) {
         finalnotification.shouldHave(text(value));
         return this;
 
@@ -81,7 +81,7 @@ public class CheckPage {
 
         return properties;
     }
-    public CheckPage AccessClientInfo() {
+    public CheckPage accessClientInfo() {
         Properties properties = loadConfig();
 
                 $("#first-name").setValue(properties.getProperty("firstname"));

@@ -1,4 +1,4 @@
-package SwagLabsTest.config;
+package swagLabsTest.config;
 
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.remote.DesiredCapabilities;

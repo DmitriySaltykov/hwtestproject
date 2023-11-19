@@ -1,10 +1,8 @@
-package SwagLabsTest.test;
+package swagLabsTest.test;
 
-import SwagLabsTest.pages.AuthPage;
+import swagLabsTest.pages.AuthPage;
 
-import SwagLabsTest.pages.CartPage;
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
+import swagLabsTest.pages.CartPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -26,17 +24,17 @@ public class CartTest extends TestBase {
             @Tag("cart")
     })
     @DisplayName("Добавление товара в корзину и проверка счетчика")
-    void SwagLabsAddTest() {
+    void swagLabsAddTest() {
 
         // Открытие страницы,успешная авторизация
         step("Открытие страницы и успешная авторизация", () -> {
             authPage
-                    .AccessAuthWithConfig();
+                    .accessAuthWithConfig();
         });
 
         step("Добавление товара в корзину и проверка изменения счетчика корзины", () -> {
             cartPage.addToCart()
-            .CheckText();
+            .checkText();
         });
 
     }
@@ -47,17 +45,17 @@ public class CartTest extends TestBase {
             @Tag("cart")
     })
     @DisplayName("Переход на PDP товара и проверка заполнение  картчоки товара")
-    void SwagLabsPDPTest() {
+    void swagLabsPDPTest() {
 
         // Открытие страницы,успешная авторизация
         step("Открытие страницы и успешная авторизация", () -> {
             authPage
-                    .AccessAuthWithConfig();
+                    .accessAuthWithConfig();
         });
         step("Переход на карточку товара и проверка заполнения полей с информацие о товаре", () -> {
         cartPage.inventoryClick()
-                .CheckDetails()
-                .CheckBtn();
+                .checkDetails()
+                .checkBtn();
         });
     }
 
@@ -67,19 +65,19 @@ public class CartTest extends TestBase {
             @Tag("cart")
     })
     @DisplayName("Переход на PDP добавленного товара  и удаление  добавленного товара")
-    void SwagLabsAddedPDPTest() {
+    void swagLabsAddedPDPTest() {
         step("Открытие страницы и успешная авторизация", () -> {
             authPage
-                    .AccessAuthWithConfig();
+                    .accessAuthWithConfig();
         });
         step("Переход на карточку товара и проверка заполнения полей с информацие о товаре", () -> {
         cartPage.addToCart()
                 .inventoryClick()
-                .CheckDetails();
+                .checkDetails();
         });
         step("Удаление товара из корзины ", () -> {
             cartPage
-                    .CheckBtnRemove();
+                    .checkBtnRemove();
         });
 
     }

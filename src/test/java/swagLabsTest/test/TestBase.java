@@ -1,18 +1,14 @@
-package SwagLabsTest.test;
+package swagLabsTest.test;
 
-import SwagLabsTest.config.ConfigReader;
-import SwagLabsTest.config.WebConfig;
-import SwagLabsTest.config.WebConfigProject;
-import SwagLabsTest.helpers.Attach;
-import com.codeborne.selenide.Configuration;
+import swagLabsTest.config.ConfigReader;
+import swagLabsTest.config.WebConfig;
+import swagLabsTest.config.WebConfigProject;
+import swagLabsTest.helpers.Attach;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.util.Map;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 

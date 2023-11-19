@@ -1,4 +1,4 @@
-package SwagLabsTest.pages;
+package swagLabsTest.pages;
 
 import com.codeborne.selenide.SelenideElement;
 
@@ -62,7 +62,7 @@ public class AuthPage {
     }
 
     //Нажатие на кнопку логаут
-    public AuthPage Logout() {
+    public AuthPage logout() {
         logout.click();
 
         return this;
@@ -83,7 +83,7 @@ public class AuthPage {
         return properties;
     }
 
-    public AuthPage AccessAuthWithConfig() {
+    public AuthPage accessAuthWithConfig() {
         Properties properties = loadConfig();
 
         open("");

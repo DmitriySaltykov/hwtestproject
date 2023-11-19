@@ -1,4 +1,4 @@
-package SwagLabsTest.helpers;
+package swagLabsTest.helpers;
 
 
 import com.codeborne.selenide.Selenide;

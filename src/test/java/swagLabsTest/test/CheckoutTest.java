@@ -1,10 +1,8 @@
-package SwagLabsTest.test;
+package swagLabsTest.test;
 
-import SwagLabsTest.pages.AuthPage;
-import SwagLabsTest.pages.CartPage;
-import SwagLabsTest.pages.CheckPage;
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
+import swagLabsTest.pages.AuthPage;
+import swagLabsTest.pages.CartPage;
+import swagLabsTest.pages.CheckPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -26,20 +24,20 @@ public class CheckoutTest extends TestBase {
             @Tag("checkout")
     })
     @DisplayName("Переход на страницу корзины")
-    void SwagLabsCheckoutTest() {
+    void swagLabsCheckoutTest() {
 
         // Открытие страницы,успешная авторизация
         step("Открытие страницы и успешная авторизация", () -> {
         authPage
-                .AccessAuthWithConfig();
+                .accessAuthWithConfig();
         });
 
         step("Добавление товара в корзину ", () -> {
             cartPage.addToCart();
         });
         step("Открытие страницы чекаута и проверка наличия добавленного товара ", () -> {
-        checkPage.OpenCheckout()
-                .CheckItem();
+        checkPage.openCheckout()
+                .checkItem();
         });
 
 
@@ -51,12 +49,12 @@ public class CheckoutTest extends TestBase {
             @Tag("checkout")
     })
     @DisplayName("Переход на страницу оплаты")
-    void SwagLabsGoRoPayest() {
+    void swagLabsGoRoPayest() {
 
         // Открытие страницы,успешная авторизация
         step("Открытие страницы и успешная авторизация", () -> {
             authPage
-                    .AccessAuthWithConfig();
+                    .accessAuthWithConfig();
         });
 
         step("Добавление товара в корзину ", () -> {
@@ -64,9 +62,9 @@ public class CheckoutTest extends TestBase {
         });
 
         step("Открытие страницы чекаута и переход на страницу оплаты ", () -> {
-        checkPage.OpenCheckout()
-                .CheckItem()
-                .CheckoutClick();
+        checkPage.openCheckout()
+                .checkItem()
+                .checkoutClick();
         });
 
 
@@ -78,22 +76,22 @@ public class CheckoutTest extends TestBase {
             @Tag("checkout")
     })
     @DisplayName("Оформление заказа, проверка нотификации при не заполненных полях")
-    void SwagLabsCreatOrderCheckNotificationTest() {
+    void swagLabsCreatOrderCheckNotificationTest() {
 
         // Открытие страницы,успешная авторизация
         step("Открытие страницы и успешная авторизация", () -> {
             authPage
-                    .AccessAuthWithConfig();
+                    .accessAuthWithConfig();
         });
 
         step("Добавление товара в корзину ", () -> {
             cartPage.addToCart();
         });
         step("Проверка нотификации на странице чекаута при не заполненых полях ", () -> {
-        checkPage.OpenCheckout()
-                .CheckItem()
-                .CheckoutClick()
-                .ContinueClick()
+        checkPage.openCheckout()
+                .checkItem()
+                .checkoutClick()
+                .continueClick()
                 .checkoutNotification("Error: First Name is required");
         });
 
@@ -105,31 +103,31 @@ public class CheckoutTest extends TestBase {
             @Tag("checkout")
     })
     @DisplayName("Оформление заказа, проверка нотификации при успешном оформлении заказа")
-    void SucsessCreatOrderTest() {
+    void sucsessCreatOrderTest() {
 
         // Открытие страницы,успешная авторизация
         step("Открытие страницы и успешная авторизация", () -> {
             authPage
-                    .AccessAuthWithConfig();
+                    .accessAuthWithConfig();
         });
 
         step("Добавление товара в корзину ", () -> {
             cartPage.addToCart();
         });
         step("Переход на страницу оплаты  ", () -> {
-        checkPage.OpenCheckout()
-                .CheckItem();
+        checkPage.openCheckout()
+                .checkItem();
         });
         step("Заполнение обязательных полей и оформление заказа ", () -> {
             checkPage
-                .CheckoutClick()
-                .AccessClientInfo()
-                .ContinueClick()
-                .FinishClick();
+                .checkoutClick()
+                .accessClientInfo()
+                .continueClick()
+                .finishClick();
         });
         step("Проверка наличия нотификации об успешном оформлении заказа", () -> {
             checkPage
-                .FinalSucsessNotification("Thank you for your order!");
+                .finalSucsessNotification("Thank you for your order!");
         });
 
 

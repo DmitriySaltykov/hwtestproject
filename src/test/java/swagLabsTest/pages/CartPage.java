@@ -1,4 +1,4 @@
-package SwagLabsTest.pages;
+package swagLabsTest.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
@@ -24,7 +24,7 @@ public class CartPage {
 
     }
 
-    public CartPage CheckText() {
+    public CartPage checkText() {
         shopingicon.shouldNotBe(empty);
 
         return this;
@@ -38,7 +38,7 @@ public class CartPage {
     }
 
     // Проверка заполнения полей с информацие о товаре
-    public CartPage CheckDetails() {
+    public CartPage checkDetails() {
         detailsname.shouldNotBe(empty);
         detailsdesc.shouldNotBe(empty);
         detailsprice.shouldNotBe(empty);
@@ -47,13 +47,13 @@ public class CartPage {
     }
 
     //Проверка текста в кнопке
-    public CartPage CheckBtn() {
+    public CartPage checkBtn() {
         primary_btn.shouldHave(text("ADD TO CART"));
 
         return this;
     }
 
-    public CartPage CheckBtnRemove() {
+    public CartPage checkBtnRemove() {
         removebtn.shouldHave(text("Remove"));
 
         return this;

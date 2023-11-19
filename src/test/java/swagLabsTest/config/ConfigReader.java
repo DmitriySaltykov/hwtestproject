@@ -1,4 +1,4 @@
-package SwagLabsTest.config;
+package swagLabsTest.config;
 
 import org.aeonbits.owner.ConfigFactory;
 

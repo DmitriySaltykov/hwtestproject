@@ -1,8 +1,6 @@
-package SwagLabsTest.test;
+package swagLabsTest.test;
 
-import SwagLabsTest.pages.AuthPage;
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
+import swagLabsTest.pages.AuthPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -22,7 +20,7 @@ public class SwagLabsAuthTest extends TestBase {
             @Tag("login"),
     })
     @DisplayName("Проверка наличия нотификации при не заполненных полях авторизации")
-    void SwagLabsTest() {
+    void swagLabsTest() {
         step("Открытие страницы", () -> {
         authPage.openPage()
                 .clickButton();
@@ -39,7 +37,7 @@ public class SwagLabsAuthTest extends TestBase {
             @Tag("login"),
     })
     @DisplayName("Проверка наличия нотификации при не валидных данных")
-    void SwagLabsELogTest() {
+    void swagLabsELogTest() {
         step("Открытие страницы", () -> {
         authPage.openPage();
         });
@@ -60,10 +58,10 @@ public class SwagLabsAuthTest extends TestBase {
             @Tag("login"),
     })
     @DisplayName("Успешная авторизация")
-    void SwagLabsLogTest() {
+    void swagLabsLogTest() {
         // Открытие страницы и успешная авторизация
         step("Открытие страницы и успешная авторизация", () -> {
-        authPage.AccessAuthWithConfig()
+        authPage.accessAuthWithConfig()
                 .checkAuthResult("Swag Labs");
         });
 
@@ -76,16 +74,16 @@ public class SwagLabsAuthTest extends TestBase {
             @Tag("login"),
     })
     @DisplayName("Логаут")
-    void SwagLabsLogoutTest() {
+    void swagLabsLogoutTest() {
 
         // Открытие страницы и успешная авторизация
         step("Открытие страницы и успешная авторизация", () -> {
-        authPage.AccessAuthWithConfig()
+        authPage.accessAuthWithConfig()
                 .OpenBurger();
         });
             step("Логаут", () -> {
                 authPage
-                .Logout();
+                .logout();
         });
 
     }
