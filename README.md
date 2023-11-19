@@ -151,8 +151,7 @@ ____
 
 > К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
 
+
 <p align="center">
-
-<img title="Selenoid_gif" src="readme_design/screens/video_test.gif">
-
+<img title="Selenoid Video" src="readme_design/screens/video_test.gif" width="550" height="350"  alt="video">   
 </p>
