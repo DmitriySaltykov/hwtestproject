@@ -13,7 +13,6 @@ import static io.qameta.allure.Allure.step;
 public class CheckoutTest extends TestBase {
 
 
-
     AuthPage authPage = new AuthPage();
     CartPage cartPage = new CartPage();
     CheckPage checkPage = new CheckPage();
@@ -28,16 +27,16 @@ public class CheckoutTest extends TestBase {
 
         // Открытие страницы,успешная авторизация
         step("Открытие страницы и успешная авторизация", () -> {
-        authPage
-                .accessAuthWithConfig();
+            authPage
+                    .accessAuthWithConfig();
         });
 
         step("Добавление товара в корзину ", () -> {
             cartPage.addToCart();
         });
         step("Открытие страницы чекаута и проверка наличия добавленного товара ", () -> {
-        checkPage.openCheckout()
-                .checkItem();
+            checkPage.openCheckout()
+                    .checkItem();
         });
 
 
@@ -62,9 +61,9 @@ public class CheckoutTest extends TestBase {
         });
 
         step("Открытие страницы чекаута и переход на страницу оплаты ", () -> {
-        checkPage.openCheckout()
-                .checkItem()
-                .checkoutClick();
+            checkPage.openCheckout()
+                    .checkItem()
+                    .checkoutClick();
         });
 
 
@@ -88,15 +87,16 @@ public class CheckoutTest extends TestBase {
             cartPage.addToCart();
         });
         step("Проверка нотификации на странице чекаута при не заполненых полях ", () -> {
-        checkPage.openCheckout()
-                .checkItem()
-                .checkoutClick()
-                .continueClick()
-                .checkoutNotification("Error: First Name is required");
+            checkPage.openCheckout()
+                    .checkItem()
+                    .checkoutClick()
+                    .continueClick()
+                    .checkoutNotification("Error: First Name is required");
         });
 
 
     }
+
     @Test
     @Tags({
             @Tag("web"),
@@ -115,22 +115,20 @@ public class CheckoutTest extends TestBase {
             cartPage.addToCart();
         });
         step("Переход на страницу оплаты  ", () -> {
-        checkPage.openCheckout()
-                .checkItem();
+            checkPage.openCheckout()
+                    .checkItem();
         });
         step("Заполнение обязательных полей и оформление заказа ", () -> {
             checkPage
-                .checkoutClick()
-                .accessClientInfo()
-                .continueClick()
-                .finishClick();
+                    .checkoutClick()
+                    .accessClientInfo()
+                    .continueClick()
+                    .finishClick();
         });
         step("Проверка наличия нотификации об успешном оформлении заказа", () -> {
             checkPage
-                .finalSucsessNotification("Thank you for your order!");
+                    .finalSucsessNotification("Thank you for your order!");
         });
-
-
 
 
     }

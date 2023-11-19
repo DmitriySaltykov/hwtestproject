@@ -34,7 +34,7 @@ public class CartTest extends TestBase {
 
         step("Добавление товара в корзину и проверка изменения счетчика корзины", () -> {
             cartPage.addToCart()
-            .checkText();
+                    .checkText();
         });
 
     }
@@ -53,9 +53,9 @@ public class CartTest extends TestBase {
                     .accessAuthWithConfig();
         });
         step("Переход на карточку товара и проверка заполнения полей с информацие о товаре", () -> {
-        cartPage.inventoryClick()
-                .checkDetails()
-                .checkBtn();
+            cartPage.inventoryClick()
+                    .checkDetails()
+                    .checkBtn();
         });
     }
 
@@ -71,9 +71,9 @@ public class CartTest extends TestBase {
                     .accessAuthWithConfig();
         });
         step("Переход на карточку товара и проверка заполнения полей с информацие о товаре", () -> {
-        cartPage.addToCart()
-                .inventoryClick()
-                .checkDetails();
+            cartPage.addToCart()
+                    .inventoryClick()
+                    .checkDetails();
         });
         step("Удаление товара из корзины ", () -> {
             cartPage

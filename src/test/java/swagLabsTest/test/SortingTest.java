@@ -13,7 +13,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class SortingTest extends TestBase {
 
 
-
     @Tags({
             @Tag("web"),
             @Tag("fasets")
@@ -29,7 +28,7 @@ public class SortingTest extends TestBase {
     @ParameterizedTest(name = "Товары на странице сортируются в соответствии с выбраннм фильтром \"{1}\" .")
     void sortingTest(String testData, String expectedResult) {
 
-       open("");
+        open("");
         $("#user-name").setValue("standard_user");
         $("#password").setValue("secret_sauce");
         $("#login-button").click();

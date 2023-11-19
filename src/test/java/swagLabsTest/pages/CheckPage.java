@@ -20,7 +20,8 @@ public class CheckPage {
             checkoutnotification = $("#checkout_info_container > div > form > div.checkout_info > div.error-message-container.error"),
 
     finishbutton = $("#finish"),
-    finalnotification = $("#checkout_complete_container");
+            finalnotification = $("#checkout_complete_container");
+
     //Нажатие на кнопку корзины
     public CheckPage openCheckout() {
         shopingicon.click();
@@ -58,18 +59,19 @@ public class CheckPage {
     }
 
 
-
     public CheckPage finishClick() {
         finishbutton.click();
 
 
         return this;
     }
+
     public CheckPage finalSucsessNotification(String value) {
         finalnotification.shouldHave(text(value));
         return this;
 
     }
+
     private Properties loadConfig() {
         Properties properties = new Properties();
 
@@ -81,10 +83,11 @@ public class CheckPage {
 
         return properties;
     }
+
     public CheckPage accessClientInfo() {
         Properties properties = loadConfig();
 
-                $("#first-name").setValue(properties.getProperty("firstname"));
+        $("#first-name").setValue(properties.getProperty("firstname"));
         $("#last-name").setValue(properties.getProperty("lastname"));
         $("#postal-code").setValue(properties.getProperty("zipcode"));
 

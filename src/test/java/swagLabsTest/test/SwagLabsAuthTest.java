@@ -22,12 +22,12 @@ public class SwagLabsAuthTest extends TestBase {
     @DisplayName("Проверка наличия нотификации при не заполненных полях авторизации")
     void swagLabsTest() {
         step("Открытие страницы", () -> {
-        authPage.openPage()
-                .clickButton();
+            authPage.openPage()
+                    .clickButton();
         });
         step("Проверка наличия нотификации при не заполненных обязательных полях", () -> {
             authPage
-                .checkResult("pic sadface: Username is required");
+                    .checkResult("pic sadface: Username is required");
         });
     }
 
@@ -39,16 +39,16 @@ public class SwagLabsAuthTest extends TestBase {
     @DisplayName("Проверка наличия нотификации при не валидных данных")
     void swagLabsELogTest() {
         step("Открытие страницы", () -> {
-        authPage.openPage();
+            authPage.openPage();
         });
         step("Установка не валидных значений", () -> {
             authPage
-                .setName("Dim", "Vit")
-                .clickButton();
+                    .setName("Dim", "Vit")
+                    .clickButton();
         });
         step("Проверка наличия нотификации", () -> {
             authPage
-                .checkResult("Epic sadface: Username and password do not match any user in this service");
+                    .checkResult("Epic sadface: Username and password do not match any user in this service");
         });
     }
 
@@ -61,8 +61,8 @@ public class SwagLabsAuthTest extends TestBase {
     void swagLabsLogTest() {
         // Открытие страницы и успешная авторизация
         step("Открытие страницы и успешная авторизация", () -> {
-        authPage.accessAuthWithConfig()
-                .checkAuthResult("Swag Labs");
+            authPage.accessAuthWithConfig()
+                    .checkAuthResult("Swag Labs");
         });
 
 
@@ -78,12 +78,12 @@ public class SwagLabsAuthTest extends TestBase {
 
         // Открытие страницы и успешная авторизация
         step("Открытие страницы и успешная авторизация", () -> {
-        authPage.accessAuthWithConfig()
-                .OpenBurger();
+            authPage.accessAuthWithConfig()
+                    .OpenBurger();
         });
-            step("Логаут", () -> {
-                authPage
-                .logout();
+        step("Логаут", () -> {
+            authPage
+                    .logout();
         });
 
     }

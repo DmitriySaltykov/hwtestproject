@@ -14,10 +14,13 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
     private static final WebConfig config = ConfigReader.Instance.read();
+
     @BeforeAll
-    public static void beforeAll(){
+    public static void beforeAll() {
         WebConfigProject webConfigProject = new WebConfigProject(config);
-        webConfigProject.webConfig();}
+        webConfigProject.webConfig();
+    }
+
     @BeforeEach
     void adddListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
