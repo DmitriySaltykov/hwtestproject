@@ -113,7 +113,7 @@ remoteUrl=https://selenoid.autotests.cloud
 
 <a id="интеграция-с-allure-testops"></a>
 
-## <img alt="Allure_TO" height="25" src="images/logoAllure_TO.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3769/dashboards">Allure TestOps</a>
+## <img alt="Allure_TO" height="25" src="readme_design/logoAllure_TO.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3769/dashboards">Allure TestOps</a>
 
 ## 🖨️ Основная страница отчёта
 
@@ -129,7 +129,7 @@ remoteUrl=https://selenoid.autotests.cloud
 
 <a id="интеграция-с-jira"></a>
 
-## <img alt="Allure" height="25" src="images/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-942">Jira</a>
+## <img alt="Allure" height="25" src="readme_design/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-942">Jira</a>
 
 <p align="center">  
 <img title="Jira" src="readme_design/screens/img_7.png" width="">  
