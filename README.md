@@ -153,6 +153,6 @@ ____
 
 [//]: # (<p align="center">)
 
-[//]: # (<img title="Selenoid_gif" src="readme_design/gifs/test_video1.mp4">)
+[//]: # (<img title="Selenoid_gif" src="readme_design/screens/video_test.gif">)
 
 [//]: # (</p>)
