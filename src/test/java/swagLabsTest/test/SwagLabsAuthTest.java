@@ -84,6 +84,9 @@ public class SwagLabsAuthTest extends TestBase {
         step("Логаут", () -> {
             authPage
                     .logout();
+            step("Поверка на отображения интерфейса для не авторизованного пользователя ", () -> {
+                authPage
+                    .checkLogoutResult("Accepted usernames are:");
         });
 
     }

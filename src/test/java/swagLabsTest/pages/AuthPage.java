@@ -17,7 +17,9 @@ public class AuthPage {
             checkresultwindow = $("#login_button_container > div > form > div.error-message-container.error"),
             openburger = $(".bm-burger-button"),
             logout = $("#logout_sidebar_link"),
-            applogo = $(".app_logo");
+            applogo = $(".app_logo"),
+    checkLogoutResult = $("#login_credentials");
+
 
 
     public AuthPage openPage() {
@@ -65,6 +67,10 @@ public class AuthPage {
         logout.click();
 
         return this;
+    }
+    public void checkLogoutResult(String value) {
+        checkLogoutResult.shouldHave(text(value));
+
     }
 
 
