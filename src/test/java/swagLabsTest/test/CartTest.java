@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Condition.text;
 import static io.qameta.allure.Allure.step;
 
 
@@ -55,7 +56,7 @@ public class CartTest extends TestBase {
         step("Переход на карточку товара и проверка заполнения полей с информацие о товаре", () -> {
             cartPage.inventoryClick()
                     .checkDetails()
-                    .checkBtn();
+                    .checkBtn("ADD TO CART");
         });
     }
 
@@ -77,7 +78,7 @@ public class CartTest extends TestBase {
         });
         step("Удаление товара из корзины ", () -> {
             cartPage
-                    .checkBtnRemove();
+                    .checkBtnRemove("Remove");
         });
 
     }

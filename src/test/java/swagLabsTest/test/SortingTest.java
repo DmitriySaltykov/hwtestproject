@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import swagLabsTest.pages.AuthPage;
-import swagLabsTest.pages.SortingPage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -39,12 +38,8 @@ public class SortingTest extends TestBase {
                     .OpenBurger();
         });
 
-        step("Установка значения сортировки", () -> {
-            sortingPage.fasetInput();
-        });
-        step("Проверка применения сортировки", () -> {
-            sortingPage.fasetInput();
-        });
+        $("[data-test='product_sort_container']").selectOptionByValue((testData));
+        $("[data-test='product_sort_container']").shouldHave(text(expectedResult));
 
 
     }

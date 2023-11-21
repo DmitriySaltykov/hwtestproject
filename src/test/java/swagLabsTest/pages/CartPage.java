@@ -47,14 +47,14 @@ public class CartPage {
     }
 
     //Проверка текста в кнопке
-    public CartPage checkBtn() {
-        primary_btn.shouldHave(text("ADD TO CART"));
+    public CartPage checkBtn(String value) {
+        primary_btn.shouldHave(text(value));
 
         return this;
     }
 
-    public CartPage checkBtnRemove() {
-        removebtn.shouldHave(text("Remove"));
+    public CartPage checkBtnRemove(String value) {
+        removebtn.shouldHave(text(value));
 
         return this;
     }

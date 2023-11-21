@@ -51,7 +51,7 @@ public class AuthPage {
     }
 
     public void checkAuthResult(String value) {
-        applogo.shouldBe(visible);
+        applogo.shouldBe(text(value));
 
     }
 
@@ -68,6 +68,7 @@ public class AuthPage {
 
         return this;
     }
+
     public void checkLogoutResult(String value) {
         checkLogoutResult.shouldHave(text(value));
 
