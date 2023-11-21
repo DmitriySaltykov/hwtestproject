@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import swagLabsTest.pages.AuthPage;
+import swagLabsTest.pages.SortingPage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -14,6 +15,7 @@ import static io.qameta.allure.Allure.step;
 
 public class SortingTest extends TestBase {
     AuthPage authPage = new AuthPage();
+    SortingPage sortingPage = new SortingPage();
 
 
 
@@ -37,11 +39,12 @@ public class SortingTest extends TestBase {
             authPage.accessAuthWithConfig()
                     .OpenBurger();
         });
-
-        $("[data-test='product_sort_container']").selectOptionByValue((testData));
-        $("[data-test='product_sort_container']").shouldHave(text(expectedResult));
-
-
+        step("Установка значения сортировки", () -> {
+            sortingPage.fasetInput(testData);
+        });
+        step("Проверка применения сортировки", () -> {
+            sortingPage.checkFasetResult(expectedResult);
+        });
     }
 
 }
