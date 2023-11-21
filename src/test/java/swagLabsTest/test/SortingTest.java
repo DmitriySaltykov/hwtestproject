@@ -14,7 +14,7 @@ import static io.qameta.allure.Allure.step;
 
 public class SortingTest extends TestBase {
     AuthPage authPage = new AuthPage();
-    SortingPage sortingPage = new SortingPage();
+
 
 
     @Tags({
