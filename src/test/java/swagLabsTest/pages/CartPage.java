@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CartPage {
-    SelenideElement primary_btn = $(".btn_primary"),
+    private SelenideElement primary_btn = $(".btn_primary"),
             shopingicon = $(".shopping_cart_badge"),
             inventorylogo = $(".inventory_item_img"),
             detailsname = $(".inventory_details_name"),
@@ -24,7 +24,7 @@ public class CartPage {
 
     }
 
-    public CartPage checkText() {
+    privat CartPage checkText() {
         shopingicon.shouldNotBe(empty);
 
         return this;

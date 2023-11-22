@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class SortingPage {
-    SelenideElement fasetinput = $("[data-test='product_sort_container']"),
+    private SelenideElement fasetinput = $("[data-test='product_sort_container']"),
             checkfasetresult = $("[data-test='product_sort_container']");
     public SortingPage fasetInput(String value) {
         fasetinput.selectOptionByValue((value));

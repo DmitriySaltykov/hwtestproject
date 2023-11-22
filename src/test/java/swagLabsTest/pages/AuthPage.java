@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class AuthPage {
 
-    SelenideElement firstNameInput = $("#user-name"),
+    private  SelenideElement firstNameInput = $("#user-name"),
             lastNameInput = $("#password"),
             loginbutton = $("#login-button"),
             checkresultwindow = $("#login_button_container > div > form > div.error-message-container.error"),

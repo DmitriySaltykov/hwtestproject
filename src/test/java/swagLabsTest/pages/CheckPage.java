@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class CheckPage {
-    SelenideElement shopingicon = $("#shopping_cart_container"),
+    private SelenideElement shopingicon = $("#shopping_cart_container"),
             cartitem = $(".cart_item"),
             checkoutbtn = $("#checkout"),
             craatorder = $("#continue"),
