@@ -24,7 +24,7 @@ public class CartPage {
 
     }
 
-    privat CartPage checkText() {
+    public CartPage checkText() {
         shopingicon.shouldNotBe(empty);
 
         return this;
